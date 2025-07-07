@@ -9,5 +9,6 @@ export default defineConfig({
     environment: "jsdom",
     globals: true,
     setupFiles: "./vitest.setup.ts"
-  }
+  },
+  base: '/React-Three-in-a-Row/'
 })
