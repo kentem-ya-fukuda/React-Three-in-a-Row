@@ -25,7 +25,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -53,6 +54,103 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+  .game {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .game-board {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .board-row {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .square {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #646cff;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .square:hover {
+    background-color: #2a2a2a;
+    border-color: #747bff;
+  }
+
+  .status {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .game-info {
+    margin-left: 20px;
+    min-width: 150px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    flex-shrink: 0;
+    position: sticky;
+    top: 0;
+  }
+
+  .game-info ol {
+    padding-left: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .game-info li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+  }
+
+  .game-info button {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 12px;
+    border: 2px solid #646cff;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .game-info button:hover {
+    background-color: #2a2a2a;
+    border-color: #747bff;
+  }
+  
 
 @media (prefers-color-scheme: light) {
   :root {
